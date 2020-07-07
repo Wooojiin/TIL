@@ -6,4 +6,10 @@
 
 #### Java
 
-- [JVM(Java Virtual Machine)](https://github.com/Wooojiin/TIL/commit/f1cc35006da8569cb820cbc6c2055e02b0c5889d)
+- [JVM(Java Virtual Machine)](https://github.com/Wooojiin/TIL/tree/master/Java/JVM(Java%20Virtual%20Machine).md)
+
+
+
+#### JPA
+
+- [Persistence Context(영속성 컨텍스트)](https://github.com/Wooojiin/TIL/tree/master/JPA/JVM(Persistence%20Context.md).md)
