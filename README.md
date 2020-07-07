@@ -12,4 +12,5 @@
 
 #### JPA
 
-- [Persistence Context(영속성 컨텍스트)](https://github.com/Wooojiin/TIL/tree/master/JPA/JVM(Persistence%20Context.md).md)
+- [Persistence Context(영속성 컨텍스트)](https://github.com/Wooojiin/TIL/tree/master/JPA/Persistence%20Context.md)
+
