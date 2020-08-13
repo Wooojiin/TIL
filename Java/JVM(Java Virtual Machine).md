@@ -76,8 +76,62 @@
 
 
 
+#### Runtime Data Area
+
+- 프로그램 수행을 위해 OS에서 할당받은 메모리 공간
+
+![](https://t1.daumcdn.net/cfile/tistory/992EE9465D08E9B903)
+
+##### PC Register
+
+- Thread 시작시 생성, Thread 마다 하나씩 존재
+- 어떤 부분을 어떤 명령으로 실행해야할 지에 대한 기록
+- 현재 수행중인 JVM 명령의 주소 가짐
 
 
 
+##### JVM 스택 영역
+
+- 프로그램 실행과정에서 임시로 할당 후 Method 호출 종료 후 소멸되는 특성의 데이터 저장 위한 영역
+- 변수, 임시 데이터, Thread, Method 정보 저장
+
+
+
+##### Native Method Stack
+
+- 실제 실행 가능한 기계어로 작성된 프로그램을 실행시키는 영역
+- Java가 아닌 다른 언어로 작성된 코드를 위한 공간
+
+
+
+##### Method Area(= Class Area, Static Area)
+
+- 클래스 정보를 처음 메모리 공간에 올릴 때 초기화되는 대상을 저장하기 위한 메모리 공간
+- Runtime Constant Pool 이라는 별도의 관리 영역도 존재 
+  - 상수 자료형을 저장하여 참조, 중복을 막음
+
+
+
+##### Heap
+
+- 객체를 저장하는 가상의 메모리 공간
+- new 연산자로 생성된 객체와 배열 저장
+
+![](https://lh3.googleusercontent.com/e2vMJ_Spk2VKm0RzhPv7Uin-UPgG0dGfPg-JwIYEHLFISwspjdHeAwtzhOdpEsjB6CrEXzVkE1XVHiiExdlBrnxkpOCgkQjRF1M6pn9kI2Dv2cHPy8UDB7EfEXdW53ME8x4wvqFd)
+
+- Permanent Generation
+  - 생성된 객체들의 정보의 주소값이 저장
+  - Class Loader에 의해 load되는 Class, Method 등에 대한 Meta 정보 저장
+
+- Young Generation
+
+  - Eden - 객체들이 최초로 생성되는 공간
+  - Survivor 0 / 1 - Eden에서 참조되는 객체들이 저장되는 공간
+
+- Old Generation
+
+  - Young 영역에서 일정 시간 참조되고 있는, 살아남은 객체들이 저장되는 공간
+
+    
 
 [^1]: 자바 가상 머신이 이해가능한 언어로 변환된 자바 소스코드
